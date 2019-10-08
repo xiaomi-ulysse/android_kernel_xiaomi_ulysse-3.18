@@ -173,7 +173,7 @@ dtb-$(CONFIG_ARCH_SDX20) += sdx20-emmc-cdp.dtb \
 	sdx20-v2-emmc-pcie-ep-mtp.dtb \
 	sdx20-v2-nand-pcie-ep-mtp.dtb
 
-dtb-$(CONFIG_ARCH_MSM8937) += msm8937-rumi.dtb \
+#dtb-$(CONFIG_ARCH_MSM8937) += msm8937-rumi.dtb \
 	msm8937-pmi8950-cdp.dtb \
 	msm8937-pmi8937-cdp.dtb \
 	msm8937-pmi8940-cdp.dtb \
@@ -267,7 +267,7 @@ dtb-$(CONFIG_ARCH_MDM9607) += mdm9607-rumi.dtb \
 	mdm9206-mtp-sdcard.dtb \
 	mdm9206-rcm.dtb
 
-dtb-$(CONFIG_ARCH_MSM8916) += msm8952-qrd-skum.dtb \
+#dtb-$(CONFIG_ARCH_MSM8916) += msm8952-qrd-skum.dtb \
        msm8952-cdp.dtb \
        msm8952-ext-codec-cdp.dtb \
        msm8952-mtp.dtb
