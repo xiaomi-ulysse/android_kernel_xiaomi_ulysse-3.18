@@ -184,25 +184,28 @@ static struct pll_clk a53ss_cci_pll = {
 };
 
 static struct pll_freq_tbl apcs_c0_pll_freq[] = {
-	F_APCS_PLL( 249600000,  13, 0x0, 0x1, 0x0, 0x0, 0x0),
-	F_APCS_PLL( 307200000,  16, 0x0, 0x1, 0x0, 0x0, 0x0),
-	F_APCS_PLL( 345600000,  18, 0x0, 0x1, 0x0, 0x0, 0x0),
-	F_APCS_PLL( 384000000,  20, 0x0, 0x1, 0x0, 0x0, 0x0),
-	F_APCS_PLL( 460800000,  24, 0x0, 0x1, 0x0, 0x0, 0x0),
-	F_APCS_PLL( 499200000,  26, 0x0, 0x1, 0x0, 0x0, 0x0),
-	F_APCS_PLL( 518400000,  27, 0x0, 0x1, 0x0, 0x0, 0x0),
-	F_APCS_PLL( 768000000,  40, 0x0, 0x1, 0x0, 0x0, 0x0),
-	F_APCS_PLL( 806400000,  42, 0x0, 0x1, 0x0, 0x0, 0x0),
-	F_APCS_PLL( 844800000,  44, 0x0, 0x1, 0x0, 0x0, 0x0),
-	F_APCS_PLL( 883200000,  46, 0x0, 0x1, 0x0, 0x0, 0x0),
-	F_APCS_PLL( 902400000,  47, 0x0, 0x1, 0x0, 0x0, 0x0),
-	F_APCS_PLL( 921600000,  48, 0x0, 0x1, 0x0, 0x0, 0x0),
-	F_APCS_PLL( 998400000,  52, 0x0, 0x1, 0x0, 0x0, 0x0),
-	F_APCS_PLL(1094400000,  57, 0x0, 0x1, 0x0, 0x0, 0x0),
-	F_APCS_PLL(1209600000,  63, 0x0, 0x1, 0x0, 0x0, 0x0),
-	F_APCS_PLL(1296000000,  67, 0x0, 0x1, 0x0, 0x0, 0x0),
-	F_APCS_PLL(1340000000,  69, 0x0, 0x1, 0x0, 0x0, 0x0),
-	F_APCS_PLL(1344000000,  70, 0x0, 0x1, 0x0, 0x0, 0x0),
+	F_APCS_PLL( 249600000, 13, 0x0, 0x1, 0x0, 0x0, 0x0),
+	F_APCS_PLL( 307200000, 16, 0x0, 0x1, 0x0, 0x0, 0x0),
+	F_APCS_PLL( 345600000, 18, 0x0, 0x1, 0x0, 0x0, 0x0),
+	F_APCS_PLL( 384000000, 20, 0x0, 0x1, 0x0, 0x0, 0x0),
+	F_APCS_PLL( 460800000, 24, 0x0, 0x1, 0x0, 0x0, 0x0),
+	F_APCS_PLL( 499200000, 26, 0x0, 0x1, 0x0, 0x0, 0x0),
+	F_APCS_PLL( 518400000, 27, 0x0, 0x1, 0x0, 0x0, 0x0),
+	F_APCS_PLL( 768000000, 40, 0x0, 0x1, 0x0, 0x0, 0x0),
+	F_APCS_PLL( 806400000, 42, 0x0, 0x1, 0x0, 0x0, 0x0),
+	F_APCS_PLL( 844800000, 44, 0x0, 0x1, 0x0, 0x0, 0x0),
+	F_APCS_PLL( 883200000, 46, 0x0, 0x1, 0x0, 0x0, 0x0),
+	F_APCS_PLL( 902400000, 47, 0x0, 0x1, 0x0, 0x0, 0x0),
+	F_APCS_PLL( 921600000, 48, 0x0, 0x1, 0x0, 0x0, 0x0),
+	F_APCS_PLL( 998400000, 52, 0x0, 0x1, 0x0, 0x0, 0x0),
+	F_APCS_PLL(1094400000, 57, 0x0, 0x1, 0x0, 0x0, 0x0),
+	F_APCS_PLL(1209600000, 63, 0x0, 0x1, 0x0, 0x0, 0x0),
+	F_APCS_PLL(1248000000, 65, 0x0, 0x1, 0x0, 0x0, 0x0),
+	F_APCS_PLL(1267200000, 66, 0x0, 0x1, 0x0, 0x0, 0x0),
+	F_APCS_PLL(1286400000, 67, 0x0, 0x1, 0x0, 0x0, 0x0),
+	F_APCS_PLL(1363200000, 71, 0x0, 0x1, 0x0, 0x0, 0x0),
+	F_APCS_PLL(1459200000, 76, 0x0, 0x1, 0x0, 0x0, 0x0),
+	F_APCS_PLL(1574400000, 82, 0x0, 0x1, 0x0, 0x0, 0x0),
 };
 
 static struct pll_clk a53ss_c0_pll = {
@@ -259,15 +262,13 @@ static struct pll_freq_tbl apcs_c1_pll_freq[] = {
 	F_APCS_PLL(1267200000, 66, 0x0, 0x1, 0x0, 0x0, 0x0),
 	F_APCS_PLL(1344000000, 70, 0x0, 0x1, 0x0, 0x0, 0x0),
 	F_APCS_PLL(1401000000, 73, 0x0, 0x1, 0x0, 0x0, 0x0),
-	F_APCS_PLL(1420800000, 74, 0x0, 0x1, 0x0, 0x0, 0x0),
-	F_APCS_PLL(1440000000, 75, 0x0, 0x1, 0x0, 0x0, 0x0),
-	F_APCS_PLL(1459200000, 76, 0x0, 0x1, 0x0, 0x0, 0x0),
 	F_APCS_PLL(1497600000, 78, 0x0, 0x1, 0x0, 0x0, 0x0),
 	F_APCS_PLL(1516800000, 79, 0x0, 0x1, 0x0, 0x0, 0x0),
-	F_APCS_PLL(1536000000, 80, 0x0, 0x1, 0x0, 0x0, 0x0),
+	F_APCS_PLL(1555200000, 81, 0x0, 0x1, 0x0, 0x0, 0x0),
 	F_APCS_PLL(1574400000, 82, 0x0, 0x1, 0x0, 0x0, 0x0),
-	F_APCS_PLL(1612800000, 84, 0x0, 0x1, 0x0, 0x0, 0x0),
 	F_APCS_PLL(1651200000, 86, 0x0, 0x1, 0x0, 0x0, 0x0),
+	F_APCS_PLL(1708800000, 89, 0x0, 0x1, 0x0, 0x0, 0x0),
+	F_APCS_PLL(1804800000, 94, 0x0, 0x1, 0x0, 0x0, 0x0),
 };
 
 static struct pll_clk a53ss_c1_pll = {
@@ -746,12 +747,12 @@ static struct clk_freq_tbl ftbl_gcc_oxili_gfx3d_clk_8937[] = {
 	F_SLEW( 400000000, FIXED_CLK_SRC, gpll0,	2,	0,	0),
 	F_SLEW( 450000000, 900000000,	  gpll3,	1,	0,	0),
 	F_SLEW( 500000000, 1000000000,	  gpll3,	1,	0,	0),
-	F_SLEW( 575000000, 1100000000,	  gpll3,	1,	0,	0),
-	F_SLEW( 615000000, 1200000000,	  gpll3,	1,	0,	0),
+	F_SLEW( 550000000, 1100000000,	  gpll3,	1,	0,	0),
+	F_SLEW( 575000000, 1150000000,	  gpll3,	1,	0,	0),
 	F_END
 };
 
-static struct clk_freq_tbl ftbl_gcc_oxili_gfx3d_clk_8937_615MHz[] = {
+static struct clk_freq_tbl ftbl_gcc_oxili_gfx3d_clk_8937_600MHz[] = {
 	F_SLEW( 19200000,  FIXED_CLK_SRC, xo,		1,	0,	0),
 	F_SLEW( 50000000,  FIXED_CLK_SRC, gpll0,	16,	0,	0),
 	F_SLEW( 80000000,  FIXED_CLK_SRC, gpll0,	10,	0,	0),
@@ -768,13 +769,13 @@ static struct clk_freq_tbl ftbl_gcc_oxili_gfx3d_clk_8937_615MHz[] = {
 	F_SLEW( 400000000, FIXED_CLK_SRC, gpll0,	2,	0,	0),
 	F_SLEW( 450000000, 900000000,	  gpll3,	1,	0,	0),
 	F_SLEW( 500000000, 1000000000,	  gpll3,	1,	0,	0),
-	F_SLEW( 575000000, 1100000000,	  gpll3,	1,	0,	0),
-	F_SLEW( 615000000, 1200000000,	  gpll3,	1,	0,	0),
-	F_SLEW( 620000000, 1200000000,	  gpll3,	1,	0,	0),
+	F_SLEW( 550000000, 1100000000,	  gpll3,	1,	0,	0),
+	F_SLEW( 575000000, 1150000000,	  gpll3,	1,	0,	0),
+	F_SLEW( 600000000, 1200000000,	  gpll3,	1,	0,	0),
 	F_END
 };
 
-static struct clk_freq_tbl ftbl_gcc_oxili_gfx3d_clk_8940_615MHz[] = {
+static struct clk_freq_tbl ftbl_gcc_oxili_gfx3d_clk_8940_600MHz[] = {
 	F_SLEW( 19200000,  FIXED_CLK_SRC, xo,		1,	0,	0),
 	F_SLEW( 50000000,  FIXED_CLK_SRC, gpll0,	16,	0,	0),
 	F_SLEW( 80000000,  FIXED_CLK_SRC, gpll0,	10,	0,	0),
@@ -791,9 +792,9 @@ static struct clk_freq_tbl ftbl_gcc_oxili_gfx3d_clk_8940_615MHz[] = {
 	F_SLEW( 400000000, FIXED_CLK_SRC, gpll0,	2,	0,	0),
 	F_SLEW( 450000000, 900000000,	  gpll3,	1,	0,	0),
 	F_SLEW( 500000000, 1000000000,	  gpll3,	1,	0,	0),
-	F_SLEW( 575000000, 1100000000,	  gpll3,	1,	0,	0),
-	F_SLEW( 615000000, 1200000000,	  gpll3,	1,	0,	0),
-	F_SLEW( 620000000, 1200000000,	  gpll3,	1,	0,	0),
+	F_SLEW( 550000000, 1100000000,	  gpll3,	1,	0,	0),
+	F_SLEW( 575000000, 1150000000,	  gpll3,	1,	0,	0),
+	F_SLEW( 600000000, 1200000000,	  gpll3,	1,	0,	0),
 	F_END
 };
 
@@ -4242,8 +4243,8 @@ static void override_for_8937(int speed_bin)
 		OVERRIDE_FMAX6(gfx3d,
 			LOWER, 160000000, LOW, 240000000,
 			NOMINAL, 320000000, NOM_PLUS, 500000000,
-			HIGH, 575000000, SUPER_TUR, 615000000);
-		OVERRIDE_FTABLE(gfx3d, ftbl_gcc_oxili_gfx3d_clk, 8937_615MHz);
+			HIGH, 575000000, SUPER_TUR, 600000000);
+		OVERRIDE_FTABLE(gfx3d, ftbl_gcc_oxili_gfx3d_clk, 8937_600MHz);
 	} else {
 		OVERRIDE_FMAX5(gfx3d,
 			LOWER, 160000000, LOW, 240000000,
@@ -4421,14 +4422,14 @@ static int msm_gcc_probe(struct platform_device *pdev)
 		if (compat_bin3) {
 			if (speed_bin) {
 				gfx3d_clk_src.freq_tbl =
-					ftbl_gcc_oxili_gfx3d_clk_8940_615MHz;
+					ftbl_gcc_oxili_gfx3d_clk_8940_600MHz;
 				gfx3d_clk_src.c.fmax[VDD_DIG_SUPER_TUR] =
-								615000000;
+								600000000;
 			} else {
 				gfx3d_clk_src.freq_tbl =
-					ftbl_gcc_oxili_gfx3d_clk_8937_615MHz;
+					ftbl_gcc_oxili_gfx3d_clk_8937_600MHz;
 				gfx3d_clk_src.c.fmax[VDD_DIG_SUPER_TUR] =
-								615000000;
+								600000000;
 			}
 		}
 	} else if (compat_bin2 || compat_bin4) {
