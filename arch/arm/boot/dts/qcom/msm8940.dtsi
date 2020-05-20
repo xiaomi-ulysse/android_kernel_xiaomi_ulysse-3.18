@@ -446,8 +446,8 @@
 
 	qcom,pvs-version-fuse-sel = <37 40 3 0>; /* foundry */
 	qcom,cpr-speed-bin-max-corners =
-		<0 (-1) 1 2 9>,
-		<1 (-1) 1 2 10>;
+		<0 (-1) 1 2 11>,
+		<1 (-1) 1 2 12>;
 
 	qcom,cpr-fuse-version-map =
 		<  0    0  (-1) (-1) (-1) (-1)>,
@@ -578,7 +578,7 @@
 			/* SUPER TURBO */
 			qcom,gpu-pwrlevel@0 {
 				reg = <0>;
-				qcom,gpu-freq = <615000000>;
+				qcom,gpu-freq = <600000000>;
 				qcom,bus-freq = <10>;
 				qcom,bus-min = <10>;
 				qcom,bus-max = <10>;
@@ -650,7 +650,7 @@
 			/* SUPER TURBO */
 			qcom,gpu-pwrlevel@0 {
 				reg = <0>;
-				qcom,gpu-freq = <615000000>;
+				qcom,gpu-freq = <600000000>;
 				qcom,bus-freq = <10>;
 				qcom,bus-min = <10>;
 				qcom,bus-max = <10>;
