@@ -1215,12 +1215,13 @@ printk("hjl reading to enter L6200\n");
 				}
 			}
 		}
-
+/*
 		if(i >= CAMERA_VENDOR_EEPROM_COUNT_MAX) {
 		pr_err("lct module not found!probe break failed!\n");
 		rc = -EFAULT;
 		goto free_slave_info;
 		}
+*/
 	}
 #endif
 
@@ -1243,12 +1244,13 @@ printk("hjl reading to enter L6200\n");
 				}
 			}
 		}
-
+/*
 		if(i >= CAMERA_VENDOR_EEPROM_COUNT_MAX) {
 			pr_err("lct module not found!probe break failed!\n");
 			rc = -EFAULT;
 			goto free_slave_info;
 		}
+*/
 	}
 #endif
 
