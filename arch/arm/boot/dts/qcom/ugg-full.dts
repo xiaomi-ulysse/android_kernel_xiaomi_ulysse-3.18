@@ -10848,7 +10848,7 @@
 				qcom,mdss-dsi-mdp-trigger = "none";
 				qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs";
 				qcom,mdss-dsi-bl-min-level = <0x1>;
-				qcom,mdss-dsi-bl-max-level = <0xfff>;
+				qcom,mdss-dsi-bl-max-level = <4095>;
 				qcom,mdss-pan-physical-width-dimension = <0x44>;
 				qcom,mdss-pan-physical-height-dimension = <0x79>;
 				qcom,mdss-dsi-reset-sequence = <0x1 0xa 0x0 0x1 0x1 0x14>;
