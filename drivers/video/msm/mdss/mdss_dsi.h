@@ -432,13 +432,13 @@ struct mdss_dsi_ctrl_pdata {
 	int rst_gpio;
 	int disp_en_gpio;
 	int bklt_en_gpio;
-#ifdef CONFIG_MACH_XIAOMI_ULYSSE
+#ifdef CONFIG_FB_MSM_MDSS_XIAOMI_ULYSSE
 	int lcmio_en_gpio;
 	int lcm_vci_en_gpio;
 #endif
 	int mode_gpio;
 	int intf_mux_gpio;
-#ifdef CONFIG_MACH_XIAOMI_ULYSSE
+#ifdef CONFIG_FB_MSM_MDSS_XIAOMI_ULYSSE
 	int ocp2131_enp_gpio;
 	int ocp2131_enn_gpio;
 #endif
@@ -484,7 +484,7 @@ struct mdss_dsi_ctrl_pdata {
 	struct dsi_panel_cmds idle_on_cmds; /* for lp mode */
 	struct dsi_panel_cmds idle_off_cmds;
 	u32 *status_valid_params;
-#ifdef CONFIG_MACH_XIAOMI_ULYSSE
+#ifdef CONFIG_FB_MSM_MDSS_XIAOMI_ULYSSE
 	struct dsi_panel_cmds cabc_on_cmds;
 	struct dsi_panel_cmds cabc_off_cmds;
 	struct dsi_panel_cmds cold_cmds;

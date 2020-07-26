@@ -32,7 +32,7 @@
 #include "mdss_panel.h"
 #include "mdss_mdp.h"
 
-#ifndef CONFIG_MACH_XIAOMI_ULYSSE
+#ifndef CONFIG_FB_MSM_MDSS_XIAOMI_ULYSSE
 #define STATUS_CHECK_INTERVAL_MS 5000
 #else
 #define STATUS_CHECK_INTERVAL_MS 500
