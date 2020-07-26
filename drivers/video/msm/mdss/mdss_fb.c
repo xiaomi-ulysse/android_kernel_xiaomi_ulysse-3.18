@@ -49,7 +49,7 @@
 #include <linux/file.h>
 #include <linux/kthread.h>
 #include <linux/dma-buf.h>
-#ifdef CONFIG_MACH_XIAOMI_ULYSSE
+#ifdef CONFIG_FB_MSM_MDSS_XIAOMI_ULYSSE
 #include "mdss_dsi.h"
 #endif
 #include "mdss_fb.h"
@@ -129,7 +129,7 @@ static int mdss_fb_send_panel_event(struct msm_fb_data_type *mfd,
 static void mdss_fb_set_mdp_sync_pt_threshold(struct msm_fb_data_type *mfd,
 		int type);
 
-#ifdef CONFIG_MACH_XIAOMI_ULYSSE
+#ifdef CONFIG_FB_MSM_MDSS_XIAOMI_ULYSSE
 int ce_state,feature_type;
 int cabc_state;
 bool ce_resume,feature_resume;
@@ -835,7 +835,7 @@ static ssize_t mdss_fb_get_dfps_mode(struct device *dev,
 	return ret;
 }
 
-#ifdef CONFIG_MACH_XIAOMI_ULYSSE
+#ifdef CONFIG_FB_MSM_MDSS_XIAOMI_ULYSSE
 extern void mdss_dsi_panel_cmds_send(struct mdss_dsi_ctrl_pdata *ctrl,
 		                           struct dsi_panel_cmds *pcmds, u32 flags);
 
@@ -1323,7 +1323,7 @@ static DEVICE_ATTR(measured_fps, S_IRUGO | S_IWUSR | S_IWGRP,
 static DEVICE_ATTR(msm_fb_persist_mode, S_IRUGO | S_IWUSR,
 	mdss_fb_get_persist_mode, mdss_fb_change_persist_mode);
 
-#ifdef CONFIG_MACH_XIAOMI_ULYSSE
+#ifdef CONFIG_FB_MSM_MDSS_XIAOMI_ULYSSE
 static DEVICE_ATTR(msm_fb_dispparam, 0644, NULL, mdss_fb_set_dispparam);
 static DEVICE_ATTR(msm_fb_ce, 0644, NULL, mdss_fb_set_ce);
 static DEVICE_ATTR(msm_fb_cabc, 0644, NULL, mdss_fb_set_cabc);
@@ -1342,7 +1342,7 @@ static struct attribute *mdss_fb_attrs[] = {
 	&dev_attr_msm_fb_dfps_mode.attr,
 	&dev_attr_measured_fps.attr,
 	&dev_attr_msm_fb_persist_mode.attr,
-#ifdef CONFIG_MACH_XIAOMI_ULYSSE
+#ifdef CONFIG_FB_MSM_MDSS_XIAOMI_ULYSSE
 	&dev_attr_msm_fb_dispparam.attr,
 	&dev_attr_msm_fb_ce.attr,
 	&dev_attr_msm_fb_cabc.attr,
@@ -2133,7 +2133,7 @@ void mdss_fb_set_backlight(struct msm_fb_data_type *mfd, u32 bkl_lvl)
 			if (mfd->bl_level != bkl_lvl)
 				bl_notify_needed = true;
 
-#ifdef CONFIG_MACH_XIAOMI_ULYSSE
+#ifdef CONFIG_FB_MSM_MDSS_XIAOMI_ULYSSE
 			first_set_bl = true;
 			if(first_set_feature(pdata,first_ce_state,first_cabc_state,first_feature_type))
 				pr_err("%s first set feature fail ! \n", __func__);
@@ -2505,7 +2505,7 @@ static int mdss_fb_blank_sub(int blank_mode, struct fb_info *info,
 	case FB_BLANK_POWERDOWN:
 	default:
 		req_power_state = MDSS_PANEL_POWER_OFF;
-#ifdef CONFIG_MACH_XIAOMI_ULYSSE
+#ifdef CONFIG_FB_MSM_MDSS_XIAOMI_ULYSSE
 		ce_resume=true;
 #endif
 		pr_debug("blank powerdown called\n");

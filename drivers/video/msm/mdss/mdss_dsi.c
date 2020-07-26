@@ -45,7 +45,7 @@ static struct mdss_dsi_data *mdss_dsi_res;
 #define DSI_DISABLE_PC_LATENCY 100
 #define DSI_ENABLE_PC_LATENCY PM_QOS_DEFAULT_VALUE
 
-#ifdef CONFIG_MACH_XIAOMI_ULYSSE
+#ifdef CONFIG_FB_MSM_MDSS_XIAOMI_ULYSSE
 int ID0_status,ID1_status;
 #endif
 
@@ -350,7 +350,7 @@ static int mdss_dsi_panel_power_on(struct mdss_panel_data *pdata)
 					__func__, ret);
 	}
 
-#ifdef CONFIG_MACH_XIAOMI_ULYSSE
+#ifdef CONFIG_FB_MSM_MDSS_XIAOMI_ULYSSE
 	ID0_status = gpio_get_value(59);
 	ID1_status = gpio_get_value(66);
 	printk("swb.%s:get lcd_detect id0=%d,id1=%d\n", __func__,ID0_status,ID1_status);
@@ -4134,7 +4134,7 @@ static int mdss_dsi_parse_gpio_params(struct platform_device *ctrl_pdev,
 	if (!gpio_is_valid(ctrl_pdata->bklt_en_gpio))
 		pr_info("%s: bklt_en gpio not specified\n", __func__);
 
-#ifdef CONFIG_MACH_XIAOMI_ULYSSE
+#ifdef CONFIG_FB_MSM_MDSS_XIAOMI_ULYSSE
 	ctrl_pdata->ocp2131_enp_gpio = of_get_named_gpio(ctrl_pdev->dev.of_node,"qcom,ocp2131-enp-gpio", 0);
 	if (!gpio_is_valid(ctrl_pdata->ocp2131_enp_gpio))
 		pr_info("%s: ocp2131_enp_gpio not specified\n", __func__);
