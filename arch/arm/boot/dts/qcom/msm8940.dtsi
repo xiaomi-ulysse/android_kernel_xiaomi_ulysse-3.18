@@ -177,7 +177,7 @@
 		reg-names = "efuse_addr";
 		regulator-name = "mem_acc_corner";
 		regulator-min-microvolt = <1>;
-		regulator-max-microvolt = <3>;
+		regulator-max-microvolt = <4>;
 
 		qcom,acc-reg-addr-list =
 			<0x01942138 0x01942130 0x01942120
@@ -446,8 +446,8 @@
 
 	qcom,pvs-version-fuse-sel = <37 40 3 0>; /* foundry */
 	qcom,cpr-speed-bin-max-corners =
-		<0 (-1) 1 2 6>,
-		<1 (-1) 1 2 7>;
+		<0 (-1) 1 2 11>,
+		<1 (-1) 1 2 12>;
 
 	qcom,cpr-fuse-version-map =
 		<  0    0  (-1) (-1) (-1) (-1)>,
@@ -578,7 +578,7 @@
 			/* SUPER TURBO */
 			qcom,gpu-pwrlevel@0 {
 				reg = <0>;
-				qcom,gpu-freq = <475000000>;
+				qcom,gpu-freq = <600000000>;
 				qcom,bus-freq = <10>;
 				qcom,bus-min = <10>;
 				qcom,bus-max = <10>;
@@ -590,7 +590,7 @@
 				qcom,gpu-freq = <450000000>;
 				qcom,bus-freq = <9>;
 				qcom,bus-min = <9>;
-				qcom,bus-max = <10>;
+				qcom,bus-max = <9>;
 			};
 
 			/* NOM+ */
@@ -605,7 +605,7 @@
 			/* NOM */
 			qcom,gpu-pwrlevel@3 {
 				reg = <3>;
-				qcom,gpu-freq = <375000000>;
+				qcom,gpu-freq = <320000000>;
 				qcom,bus-freq = <6>;
 				qcom,bus-min = <5>;
 				qcom,bus-max = <8>;
@@ -614,7 +614,7 @@
 			/* SVS+ */
 			qcom,gpu-pwrlevel@4 {
 				reg = <4>;
-				qcom,gpu-freq = <300000000>;
+				qcom,gpu-freq = <240000000>;
 				qcom,bus-freq = <5>;
 				qcom,bus-min = <4>;
 				qcom,bus-max = <7>;
@@ -623,7 +623,7 @@
 			/* SVS */
 			qcom,gpu-pwrlevel@5 {
 				reg = <5>;
-				qcom,gpu-freq = <216000000>;
+				qcom,gpu-freq = <160000000>;
 				qcom,bus-freq = <3>;
 				qcom,bus-min = <1>;
 				qcom,bus-max = <4>;
@@ -650,7 +650,7 @@
 			/* SUPER TURBO */
 			qcom,gpu-pwrlevel@0 {
 				reg = <0>;
-				qcom,gpu-freq = <500000000>;
+				qcom,gpu-freq = <600000000>;
 				qcom,bus-freq = <10>;
 				qcom,bus-min = <10>;
 				qcom,bus-max = <10>;
@@ -677,7 +677,7 @@
 			/* NOM */
 			qcom,gpu-pwrlevel@3 {
 				reg = <3>;
-				qcom,gpu-freq = <375000000>;
+				qcom,gpu-freq = <320000000>;
 				qcom,bus-freq = <6>;
 				qcom,bus-min = <5>;
 				qcom,bus-max = <8>;
@@ -686,7 +686,7 @@
 			/* SVS+ */
 			qcom,gpu-pwrlevel@4 {
 				reg = <4>;
-				qcom,gpu-freq = <300000000>;
+				qcom,gpu-freq = <240000000>;
 				qcom,bus-freq = <5>;
 				qcom,bus-min = <4>;
 				qcom,bus-max = <7>;
@@ -695,7 +695,7 @@
 			/* SVS */
 			qcom,gpu-pwrlevel@5 {
 				reg = <5>;
-				qcom,gpu-freq = <216000000>;
+				qcom,gpu-freq = <160000000>;
 				qcom,bus-freq = <3>;
 				qcom,bus-min = <1>;
 				qcom,bus-max = <4>;

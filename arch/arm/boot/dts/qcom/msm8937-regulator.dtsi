@@ -308,7 +308,7 @@
 		compatible = "qcom,mem-acc-regulator";
 		regulator-name = "mem_acc_corner";
 		regulator-min-microvolt = <1>;
-		regulator-max-microvolt = <3>;
+		regulator-max-microvolt = <4>;
 
 		qcom,acc-reg-addr-list =
 			<0x01942138 0x01942130 0x01942120
@@ -356,11 +356,11 @@
 		interrupts = <0 15 0>;
 		regulator-name = "apc_corner";
 		regulator-min-microvolt = <1>;
-		regulator-max-microvolt = <7>;
+		regulator-max-microvolt = <12>;
 
 		qcom,cpr-fuse-corners = <3>;
 		qcom,cpr-voltage-ceiling = <1155000 1225000 1350000>;
-		qcom,cpr-voltage-floor =   <1050000 1050000 1090000>;
+		qcom,cpr-voltage-floor =   <1050000 1190000 1350000>;
 		vdd-apc-supply = <&pm8937_s5>;
 
 		mem-acc-supply = <&mem_acc_vreg_corner>;
@@ -393,7 +393,7 @@
 					<70 54 7 0>;
 		qcom,cpr-fuse-quot-offset-scale = <5 5 5>;
 		qcom,cpr-init-voltage-step = <10000>;
-		qcom,cpr-corner-map = <1 2 3 3 3 3 3>;
+		qcom,cpr-corner-map = <1 2 3 3 3 3 3 3 3 3 3 3>;
 		qcom,cpr-corner-frequency-map =
 				<1 960000000>,
 				<2 1094400000>,
@@ -401,11 +401,16 @@
 				<4 1248000000>,
 				<5 1344000000>,
 				<6 1401000000>,
-				<7 1497600000>;
+				<7 1497600000>,
+				<8 1516800000>,
+				<9 1555200000>,
+				<10 1574400000>,
+				<11 1651200000>,
+				<12 1708800000>;
 		qcom,speed-bin-fuse-sel = <37 34 3 0>;
 		qcom,cpr-speed-bin-max-corners =
-					<0 0 1 2 6>,
-					<1 0 1 2 7>,
+					<0 0 1 2 11>,
+					<1 0 1 2 12>,
 					<2 0 1 2 3>;
 		qcom,cpr-fuse-revision = <69 39 3 0>;
 		qcom,cpr-quot-adjust-scaling-factor-max = <0 1400 1400>;
