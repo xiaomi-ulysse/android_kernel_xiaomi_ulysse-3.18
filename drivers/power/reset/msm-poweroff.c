@@ -65,7 +65,7 @@ int download_mode = 0;
 static const int download_mode;
 #endif
 
-static int in_panic;
+int in_panic = 0;
 
 static int panic_prep_restart(struct notifier_block *this,
 			      unsigned long event, void *ptr)
@@ -82,7 +82,6 @@ static struct notifier_block panic_blk = {
 #define EDL_MODE_PROP "qcom,msm-imem-emergency_download_mode"
 #define DL_MODE_PROP "qcom,msm-imem-download_mode"
 
-int in_panic = 0;
 static void *dload_mode_addr;
 static bool dload_mode_enabled;
 static void *emergency_dload_mode_addr;
