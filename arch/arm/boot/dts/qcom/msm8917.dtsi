@@ -1938,17 +1938,17 @@
 			qcom,gpu-pwrlevel@0 {
 				reg = <0>;
 				qcom,gpu-freq = <650000000>;
-				qcom,bus-freq = <7>;
-				qcom,bus-min = <7>;
-				qcom,bus-max = <7>;
+				qcom,bus-freq = <8>;
+				qcom,bus-min = <8>;
+				qcom,bus-max = <8>;
 			};
 
 			/* NOM+ */
 			qcom,gpu-pwrlevel@1 {
 				reg = <1>;
 				qcom,gpu-freq = <600000000>;
-				qcom,bus-freq = <6>;
-				qcom,bus-min = <5>;
+				qcom,bus-freq = <7>;
+				qcom,bus-min = <7>;
 				qcom,bus-max = <7>;
 			};
 
