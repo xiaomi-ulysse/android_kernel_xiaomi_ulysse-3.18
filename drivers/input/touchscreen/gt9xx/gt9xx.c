@@ -592,7 +592,6 @@ static void goodix_ts_work_func(struct work_struct *work)
 
 				doze_buf[2] = 0x00;
 				gtp_i2c_write(i2c_connect_client, doze_buf, 3);
-		gtp_enter_doze(ts);
 		}
 			} else {
 
