@@ -20,6 +20,7 @@
  */
 
 #include <linux/irq.h>
+#include <linux/sysctl.h>
 #include "gt9xx.h"
 
 #if GTP_ICS_SLOT_REPORT
@@ -139,6 +140,10 @@ static s8 gtp_enter_doze(struct goodix_ts_data *ts);
 #ifdef GTP_CONFIG_OF
 int gtp_parse_dt_cfg(struct device *dev, u8 *cfg, int *cfg_len, u8 sid);
 #endif
+
+static int sysctl_dt2w_min_val = 0;
+static int sysctl_dt2w_max_val = 1;
+static struct ctl_table_header *dt2w_sysctl_header;
 
 s32 gtp_i2c_read(struct i2c_client *client, u8 *buf, s32 len)
 {
@@ -2255,7 +2260,27 @@ int goodix_remove_sysfs(struct i2c_client * client)
 	return 0;
 }
 
+static struct ctl_table dt2w_child_table[] = {
+    {
+        .procname       = "dt2w",
+        .maxlen         = sizeof(int),
+        .mode           = 0666,
+        .data           = &gesture_enable_flag,
+        .proc_handler   = &proc_dointvec_minmax,
+        .extra1         = &sysctl_dt2w_min_val,
+        .extra2         = &sysctl_dt2w_max_val,
+    },
+    {}
+};
 
+static struct ctl_table dt2w_parent_table[] = {
+    {
+        .procname       = "dev",
+        .mode           = 0555,
+        .child          = dt2w_child_table,
+    },
+    {}
+};
 
 static int goodix_ts_probe(struct i2c_client *client, const struct i2c_device_id *id)
 {
@@ -2268,6 +2293,12 @@ static int goodix_ts_probe(struct i2c_client *client, const struct i2c_device_id
 		return -ENODEV;
 	}
 
+	/* DT2W sysctl */
+	dt2w_sysctl_header = register_sysctl_table(dt2w_parent_table);
+	if (!dt2w_sysctl_header) {
+		printk(KERN_ALERT "Error: Failed to register dt2w_sysctl_header\n");
+		return -EFAULT;
+	}
 
 	GTP_INFO("GTP Driver Version: %s", GTP_DRIVER_VERSION);
 
@@ -2446,6 +2477,9 @@ err_free_gpio:
 static int goodix_ts_remove(struct i2c_client *client)
 {
 	struct goodix_ts_data *ts = i2c_get_clientdata(client);
+
+	/* DT2W sysctl */
+	unregister_sysctl_table(dt2w_sysctl_header);
 
 	GTP_DEBUG_FUNC();
 
