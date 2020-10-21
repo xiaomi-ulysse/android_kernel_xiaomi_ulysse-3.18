@@ -69,18 +69,6 @@
 		label = "vibrator";
 	};
 
-		goodix_fp{
-			compatible = "goodix,fingerprint";
-			interrupt-parent = <&tlmm>;
-			interrupt = <124 0x0>;
-			vcc_spi_supply = <&pm8917_l6>;
-			vcc_ana_supply = <&pm8917_l6>;
-			vdd_io-supply = <&pm8917_l6>;
-			goodix,gpio_reset = <&tlmm 132 0>;
-			goodix,gpio_irq = <&tlmm 124 0>;
-		goodix,gpio_ldo = <&tlmm 128 0>;
-		};
-
 	pwm_ir {
 		compatible = "pwm-ir";
 		pwms = <&pm8937_pwm 0 0>;
@@ -89,25 +77,6 @@
 		vdd-supply = <&pm8917_l10>;
 	};
 
-	fpc1020 {
-		status = "ok";
-		compatible = "fpc,fpc1020";
-		interrupt-parent = <&tlmm>;
-		interrupts = <124 0x0>;
-		fpc,gpio_rst    = <&tlmm 132 0x0>;
-		fpc,gpio_irq    = <&tlmm 124 0x0>;
-		vcc_spi-supply  = <&pm8917_l6>;
-		vdd_io-supply   = <&pm8917_l6>;
-		vdd_ana-supply  = <&pm8917_l6>;
-
-		pinctrl-names = "fpc1020_reset_reset",
-			"fpc1020_reset_active",
-			"fpc1020_irq_active";
-
-		pinctrl-0 = <&msm_gpio_132>;
-		pinctrl-1 = <&msm_gpio_132_output_high>;
-		pinctrl-2 = <&msm_gpio_124>;
-	};
 };
 
 &pm8937_gpios{
